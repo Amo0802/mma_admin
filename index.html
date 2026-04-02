@@ -621,6 +621,9 @@ select option { background: var(--surface); }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
+.fighter-photo {
+  object-position: center 15%;
+}
   .sidebar { width: 60px; min-width: 60px; }
   .sidebar-brand h1 { font-size: 0.7rem; }
   .sidebar-brand span, .nav-item span, .sidebar-footer { display: none; }
@@ -661,12 +664,13 @@ select option { background: var(--surface); }
     flex-direction: column;
     align-items: center;
     gap: 2px;
-    padding: 6px 8px;
+    padding: 6px 4px;
     color: var(--text2);
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     font-weight: 600;
     cursor: pointer;
     border-radius: 8px;
+    flex: 1;
   }
   .mobile-nav .mn-item.active { color: var(--primary); }
   .mobile-nav .mn-item svg { width: 20px; height: 20px; }
@@ -902,6 +906,10 @@ select option { background: var(--surface); }
   <div class="mn-item" data-page="payments" onclick="navigate('payments')">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
     Pay
+  </div>
+  <div class="mn-item" data-page="trainers" onclick="navigate('trainers')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    Trainers
   </div>
 </nav>
 
